@@ -402,6 +402,7 @@ void draw() {
     // > Remember to stop player's moving! (reset playerMoveTimer)
     // > Remember to recalculate playerCol/playerRow when you reset playerX/playerY!
     // > Remember to reset the soil under player's original position!
+    
     for(int i = 0; i < 6; i++){
       soldierX[i] += soldierSpeed;
       if(soldierX[i] > width){
