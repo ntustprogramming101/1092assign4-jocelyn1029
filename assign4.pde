@@ -214,7 +214,7 @@ void draw() {
 
     fill(124, 204, 25);
     noStroke();
-    rect(0, -GRASS_HEIGHT, width, GRASS_HEIGHT);
+    rect(0, -GRASS_HEIGHT, 640, GRASS_HEIGHT);
 
     // Soil
 
