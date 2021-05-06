@@ -405,7 +405,7 @@ void draw() {
     
     for(int i = 0; i < 6; i++){
       soldierX[i] += soldierSpeed;
-      if(soldierX[i] > width){
+      if(soldierX[i] > 640){
         soldierX[i] = -80;
       }
       image(soldier,soldierX[i],soldierY[i]);
