@@ -225,12 +225,10 @@ void draw() {
         // NOTE: To avoid errors on webpage, you can either use floor(j / 4) or (int)(j / 4) to make sure it's an integer.
         int areaIndex = floor(j / 4);
         
-        image(soils[areaIndex][(constrain(soilHealth[i][j],0,15)-1)/3],
-        i * SOIL_SIZE, j * SOIL_SIZE);
+        image(soils[areaIndex][(constrain(soilHealth[i][j],0,15)-1)/3],i * SOIL_SIZE, j * SOIL_SIZE);
         
         if(soilHealth[i][j]>15){
-          image(stones[0][(constrain(soilHealth[i][j],0,30)-16)/3],
-          i * SOIL_SIZE, j * SOIL_SIZE);
+          image(stones[0][(constrain(soilHealth[i][j],0,30)-16)/3],i * SOIL_SIZE, j * SOIL_SIZE);
         }
         
         if(soilHealth[i][j]>30){
