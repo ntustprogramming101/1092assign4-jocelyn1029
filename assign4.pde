@@ -62,7 +62,6 @@ void setup() {
   life = loadImage("img/life.png");
   soldier = loadImage("img/soldier.png");
   cabbage = loadImage("img/cabbage.png");
-
   soilEmpty = loadImage("img/soils/soilEmpty.png");
 
   // Load soil images used in assign3 if you don't plan to finish requirement #6
@@ -225,10 +224,12 @@ void draw() {
         // NOTE: To avoid errors on webpage, you can either use floor(j / 4) or (int)(j / 4) to make sure it's an integer.
         int areaIndex = floor(j / 4);
         
-        image(soils[areaIndex][(constrain(soilHealth[i][j],0,15)-1)/3],i * SOIL_SIZE, j * SOIL_SIZE);
+        image(soils[areaIndex][4],
+        i * SOIL_SIZE, j * SOIL_SIZE);
         
         if(soilHealth[i][j]>15){
-          image(stones[0][(constrain(soilHealth[i][j],0,30)-16)/3],i * SOIL_SIZE, j * SOIL_SIZE);
+          image(stones[0][4],
+          i * SOIL_SIZE, j * SOIL_SIZE);
         }
         
         if(soilHealth[i][j]>30){
@@ -403,7 +404,7 @@ void draw() {
     
     for(int i = 0; i < 6; i++){
       soldierX[i] += soldierSpeed;
-      if(soldierX[i] > 640){
+      if(soldierX[i] > width){
         soldierX[i] = -80;
       }
       image(soldier,soldierX[i],soldierY[i]);
